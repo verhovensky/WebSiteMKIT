@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Министерство культуры, информации и туризма Кыргызской Республики</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/health/plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/site.css" />
+   
+</head>
+<body>
+    <header class="bg-primary">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3" style="margin-top:-10px; margin-bottom:-20px;">
+            <div class="container">
+                <a class="navbar-brand text-white myTitle" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/health/images/gerbkg.png" height="80px" alt="">
+                </a>
+                <div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+                    <h4 class="text-white text-left" style="line-height: 150%;">МИНИСТЕРСТВО КУЛЬТУРЫ, ИНФОРМАЦИИ И ТУРИЗМА<br /> КЫРГЫЗСКОЙ РЕСПУБЛИКИ</h4>
+                </div>
+                <div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+                    <form action="#" class="menu_search_form">
+                        <input type="text" class="menu_search_input" placeholder="Поиск" required="required">
+                        <button class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                &nbsp;
+                &nbsp;
+                <div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+                    <span class="text-white">
+                        <a asp-controller="Home" class="text-white" asp-action="SetLang" asp-route-id="1">   Рус </a>
+                        &nbsp; <a asp-controller="Home" class="text-white" asp-action="SetLang" asp-route-id="2">  Кырг </a>
+                    </span>
+                </div>
+            </div>
+            &nbsp;
+        </nav>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3" style="margin-top:-20px; margin-bottom:-20px;">
+            <div class="container">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            МИНИСТЕРСТВО
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-primary" asp-controller="Departments" asp-action="Index"><i class="fa fa-sitemap"></i>&nbsp;  Подведомственные подразделения</a>
+                            <a class="dropdown-item text-primary" asp-controller="Otdels" asp-action="Index"><i class="fa fa-list" aria-hidden="true"></i> &nbsp; Подразделения</a>
+                            <a class="dropdown-item text-primary" asp-controller="Positions" asp-action="Index"><i class="fa fa-globe"></i>&nbsp; Должности</a>
+                            <a class="dropdown-item text-dark" asp-controller="OtdelDetalis" asp-action="Index"><i class="fa fa-book"></i>&nbsp; Центральный аппарат</a>
+                            <a class="dropdown-item text-dark" asp-controller="Kollegias" asp-action="Index"><i class="fa fa-random"></i>&nbsp; Члены коллегии</a>
+                            <div class="dropdown-divider  text-dark"></div>
+                            <a class="dropdown-item text-primary" asp-controller="ListOfResources" asp-action="Index"><i class="fa fa-map-o"></i>&nbsp; Полезные ресурсы</a>
+
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            МИНИСТЕРСТВО
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="History">История министерства</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Executives"> Руководство Министерства</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Structure">Структура</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Reglament">Регламент</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Kollegia">Коллегия</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="ObshestvenoNabSovet">Общественно-наблюдательный совет</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="RabCult">О дне работника культуры</a>
+                            @*<a class="dropdown-item text-primary" asp-controller="Home" asp-action="Structure">Подведомственные подразделения</a>*@
+                            <div class="dropdown-divider  text-dark"></div>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Dostoyanie">Достояние республики</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ДОСТОЯНИЕ
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="Dostoyanie1">Народные артисты СССР</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Народные художники СССР</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Герои Социалистического труда СССР</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Лауретаы Госудасртсвенной Премии СССР</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Герои Кыргызской Республики</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Народный артисты Кыргызской Республики</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Народные писатели Кыргызской Республики</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Народные поэты Кыргызской Республики</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">Народные  художники Кыргызской Республики</a>
+                            <a class="dropdown-item text-dark" asp-controller="Home" asp-action="History">лауреаты государтсвенной премии  Кыргызмкой Республики имени Токтогула</a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ДЕЯТЕЛЬНОСТЬ
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Documents">НПА</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="International"> Международное сотрудничество</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="PageIKN">Историко-культурное наследия</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Remeslo">Ремесленный сектор</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="MyzeiIndex"> Музейное дело</a>
+                            <a class="dropdown-item text-dark" asp-controller="Account" asp-action="Index"> Библиотечное дело</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="NKN">  Нематериальное наследие</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Education"> Профессиональное образование</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="RazvitieProfObraz"> Развитие профессионального искусства</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Kinomotography"> Кинематография</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Turizm"> Туризм</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="InfPolitika"> Информационная политика</a>
+                            <a class="dropdown-item text-dark" asp-controller="Account" asp-action="Index">  Национальный культурный центр</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Anticorrypt">  Антикоррупционные мероприятия</a>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            СОБЫТИЯ
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-dark" asp-controller="Account" asp-action="RoleIndex">  НОВОСТИ</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="PhotoGalery"> ФОТО ГАЛЕРЕЯ</a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ГРАЖДАНАМ
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="PriemCitizen">  Акты регламентирующие общественный прем граждан</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="TelefonDoveria"> Телефон доверия</a>
+                            <a class="dropdown-item text-dark" asp-controller="Countries" asp-action="Index"> Режим работы</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="GraphicOfCitizens">  Прием граждан</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="AppealsOfCitizens"> Обращение граждан</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown bg-primary">
+                        <a class="bg-primary dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            КОНТАКТЫ
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="ExecutivesContacts"> Руководство</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="Contacts"> Адрес и реквизиты министерства </a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="ContactsSA"> Центральный аппарат министерства</a>
+                            @*<a class="dropdown-item text-primary" href="~/docs/contacts/ConactSA.pdf" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;  Центральный аппарат министерства</a>*@
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="ContactsPodved">Подведомственные подразделения   </a>
+                            <a class="dropdown-item text-dark" asp-controller="Raions" asp-action="Index"> Территориальные подразделения</a>
+                            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="SubordinatedInstitutions"> Подведомственные учреждения</a>
+                            @*<a class="dropdown-item" asp-area="GlobalDicts" asp-controller="DictCinemaDurations" asp-action="Index">Продолжительность фильма</a>*@
+                            <div class="dropdown-divider  text-dark"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-thumbnail" src="~/health/styles/banner.gif" alt="...">
+            </div>
+        </div>
+        <br />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top footer bg-primary text-muted">
+        <div class="container">
+            <nav class="footer_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a asp-action="Contacts" asp-controller="Home"><span class="text-white">Контакты</span> </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a asp-area="Identity" asp-page="/Account/Login"><span class="text-white">Вход в систему</span> </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a asp-action="JobsList" asp-controller="Home"><span class="text-white">Ваканcии</span> </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a asp-action="SiteMap" asp-controller="Home"><span class="text-white">Карта сайта</span> </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="https://www.instagram.com/min_cult_kg" target="_blank">
+                                <i class="fa fa-instagram text-white fa-2x" aria-hidden="true"></i>
+                            </a>&nbsp;
+                            <a href="https://www.facebook.com/minculturegovkg/" target="_blank">
+                                <i class="fa fa-facebook text-white fa-2x" aria-hidden="true"></i>
+                            </a>&nbsp;
+                            <a href="https://www.youtube.com/channel/UCBLTWiQHgtfLqTJPcEK6KmQ?disable_polymer=true" target="_blank">
+                                <i class="fa fa-youtube text-white fa-2x" aria-hidden="true"></i>
+                            </a>&nbsp;
+                            <a href="https://t.me/min_cult_kg" target="_blank">
+                                <i class="fa fa-telegram text-white fa-2x" aria-hidden="true"></i>
+                            </a>&nbsp;
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

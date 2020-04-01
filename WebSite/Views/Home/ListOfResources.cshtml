@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebSite.Models.ListOfResources>
+@{
+    ViewData["Title"] = "ListOfResources";
+}
+
+
+<!-- руководство -->
+
+    <div class="container">
+        <br><br>
+
+        <div class="row">
+            <div class="col text-center">
+                <div class="section_title">Список полезных ссылок</div>
+            </div>
+        </div>
+        <br><br>
+            <div class="card-deck  text-center">
+                @foreach (var item in Model)
+                {
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                            @Html.Raw(item.Links)
+                                <h4 class="text-white">@Html.DisplayFor(modelItem => item.Name)</h4>
+                                @*<i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;*@
+                           
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+<br>
+<br>

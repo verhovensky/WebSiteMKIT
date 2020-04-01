@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "MyzeinyiFond";
+}
+
+
+<div class="container">
+    <br />
+    <br />
+    @if (ViewBag.Lang == 1)
+    {
+        <div class="row">
+            
+            <br />
+            <p><h4>Музейный фонд</h4> </p>
+            <p>Музеи проводят проверку наличия и сохранности музейного фонда систематически. Проверка наличия осуществляется комиссией, образованной на основании приказа директора музея. План - график проверки составляется с учетом объема музейного фонда; для музеев с общим количеством фондов от 500 до 3000 ед. хранения – 1 раз в 2 года; от 3000 до 30000 -1 раз в 3 года; от 30000 до 300000 -1 раз в 5 лет.</p>
+            <br />
+            <p>
+                <table class="table">
+                    <thead>
+                        <tr style="background-color:darkkhaki">
+                            <td>№</td>
+                            <td>Название музея</td>
+                            <td>2019</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="background-color:darkblue">
+                            <td colspan="3" class="text-center text-white">Музеи республиканского значения</td>
+                        </tr>
+                        @{ int id = 1;}
+                        @foreach (var item in ViewBag.Resp)
+                        {
+                            <tr>
+                                <td>@id</td>
+                                <td>@item.Name</td>
+                                <td>@item.God</td>
+                            </tr>
+                            { id++; }
+                        }
+                        <tr style="background-color:darkblue">
+                            <td colspan="3" class="text-center text-white">Городские музеи</td>
+                        </tr>
+                        @{ id = 1;}
+                        @foreach (var item in ViewBag.Gorod)
+                        {
+                            <tr>
+                                <td>@id</td>
+                                <td>@item.Name</td>
+                                <td>@item.God</td>
+                            </tr>
+                            { id++; }
+                        }
+                        <tr style="background-color:darkblue">
+                            <td colspan="3" class="text-center text-white">Областные музеи </td>
+                        </tr>
+                        @{ id = 1;}
+                        @foreach (var item in ViewBag.Oblast)
+                        {
+                            <tr>
+                                <td>@id</td>
+                                <td>@item.Name</td>
+                                <td>@item.God</td>
+                            </tr>
+                            { id++; }
+                        }
+                        <tr style="background-color:darkblue">
+                            <td colspan="3" class="text-center text-white">Районные музеи </td>
+                        </tr>
+                        @{ id = 1;}
+                        @foreach (var item in ViewBag.Raion)
+                        {
+                            <tr>
+                                <td>@id</td>
+                                <td>@item.Name</td>
+                                <td>@item.God</td>
+                            </tr>
+                            { id++; }
+                        }
+                        <tr style="background-color:darkblue">
+                            <td colspan="3" class="text-center text-white">Сельские музеи </td>
+                        </tr>
+                        @{ id = 1;}
+                        @foreach (var item in ViewBag.Selo)
+                        {
+                            <tr>
+                                <td>@id</td>
+                                <td>@item.Name</td>
+                                <td>@item.God</td>
+                            </tr>
+                            { id++; }
+                        }
+                    </tbody>
+                </table>
+
+            </p>
+           
+
+        </div>
+    }
+</div>
+

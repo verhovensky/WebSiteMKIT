@@ -1,0 +1,420 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<link rel="stylesheet" href="~/css/gallery-clean.css">
+<style>
+    /* style the tooltip box and arrow based on your class*/
+    .bs-tooltip-left .redTip {
+        background-color: blue !important
+    }
+
+    .bs-tooltip-left .redTip-arrow::before {
+        border-left-color: blue !important
+    }
+</style>
+<br />
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+    </div>
+    <div class="col-sm-6 col-md-6">
+        <h2 class="text-center">@ViewBag.Theme</h2>
+    </div>
+    <div class="col-sm-6 col-md-3">
+    </div>
+</div>
+
+<div class="container gallery-container" style="display:normal;">
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail" style="text-align:center">
+                    <a class="lightbox" href="~/images/dostoyanie/AbdylasMaldybaev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/AbdylasMaldybaev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Кыргызский советский композитор и певец (тенор), педагог. Родился 24 июня (7 июля) 1906 года в с. Карабулак, Семиреченская область, Российская империя (ныне - Кеминского района, Чуйской области Заслуженный деятель искусства Киргизской ССР (1937).Народный артист СССР (7.06.1939).">
+                    </a>
+                    <div class="caption">
+                        <h3>Абдылас Малдыбаев</h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail" style="text-align:center">
+                    <a class="lightbox" href="~/images/dostoyanie/ArtykMyrzabaev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/ArtykMyrzabaev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Кыргызский советский оперный певец (баритон), педагог. Родился 11 мая 1930 года в с. Кызыл-Аскер (ныне — в черте Бишкека. Народный артист СССР (1967).">
+                    </a>
+                    <div class="caption">
+                        <h3>Артык Мурзабаев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail" style="text-align:center">
+                    <a class="lightbox" href="~/images/dostoyanie/AsankanJumakmatov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/AsankanJumakmatov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский дирижёр, музыкальный педагог. Член КПСС с 1944 года. Родился 16 июня 1923 года (по другим источникам — 16 июля[4]) в селе Иссык-Ата недалеко от курортного местечка «Арашан» (ныне в Ысык-Атинском районе, Чуйской области. Народный артист СССР. Герой Кыргызской Республики.">
+                    </a>
+                    <div class="caption">
+                        <h3>Асанкан Жумакматов</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/BaketKydykeeva.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/BaketKydykeeva.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советская, кыргызская актриса театра и кино. Родилась 20 октября 1923 года в селе Токолдош Ворошиловского (ныне Аламединского) района Фрунзенской области (ныне Бишкек). Заслуженная артистка Кыргызской ССР (1947). Народная артистка Кыргызской ССР (1956). Народная артистка СССР (1970). Государственная премия Киргизской ССР имени Токтогула Сатылганова (1970).">
+                    </a>
+                    <div class="caption">
+                        <h3>Бакен Кыдыкеева</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/BolotMinjulkyev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/BolotMinjulkyev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский и российский оперный певец (бас), педагог. Родился 23 апреля 1940 года во Фрунзе (по другим источникам — в селе  Тору-Айгыр ,  Иссык-Кульский район ,  Иссык-Кульская область Заслуженный артист Киргизской ССР (1971) Народный артист Киргизской ССР (1973) [2] Народный артист СССР (1976) Государственная премия СССР (1985) — за концертные программы 1981—1984 годов Премия Ленинского комсомола (1975) — за концертные программы 1974—1975 годов Государственная премия Киргизской ССР имени Токтогула Сатылганова (1976) Премия Ленинского комсомола Киргизской ССР (1972) Лауреат Международного конкурса вокалистов в Тулузе (2-я премия, 1971) Лауреат Международного конкурса молодых оперных певцов в Софии (1-я премия, 1973) Медаль им. К. Поповой (1973)." />
+                    </a>
+                    <div class="caption">
+                        <h3>Болот Минжылкиев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/BolotShamshiev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/BolotShamshiev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title=" Советский и кыргызский актёр, кинорежиссёр и сценарист. Родился в семье патриарха кыргызской литературы, известного поэта и журналиста Толона Шамшиева. Мать — Авина Мурзаходжаева была известным врачом. Заслуженный деятель искусств Киргизской ССР.	Народный артист Киргизской ССР (1975)[4]. Народный артист СССР (1991). Государственная премия СССР (1977) — за фильм «Белый пароход». Премия Ленинского комсомола Киргизской ССР (1969) — за фильм «Выстрел на перевале Караш».	Орден «Знак Почёта». Орден Дружбы Народов. Орден «Манас» 3-й степени (1997). Орден «Манас» 2-й степени (2006).	Медаль «За доблестный труд. В ознаменование 100-летия со дня рождения В. И. Ленина». Почётная Грамота Верховного совета Киргизской ССР">
+                    </a>
+                    <div class="caption">
+                        <h3>Болот Шамшиев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/BybysaraBeishenalieva.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/BybysaraBeishenalieva.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Первая балерина Кыргызстана. Родилась 17 мая 1926 года, селе Таш-Тюбе (Кыргызская АССР). Заслуженная артистка Кыргызской ССР (1947). Народная артистка Кыргызской ССР (1954). Народная артистка СССР (1958).">
+                    </a>
+                    <div class="caption">
+                        <h3>Бубусара Бейшеналиева</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/CholponbekBazarbaev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/CholponbekBazarbaev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Кыргызский артист балета, танцовщик. Родился 4 февраля 1949 года в селе Чолпон Кочкорского района (ныне — в Нарынской области) в семье служащих. Заслуженный артист Киргизской ССР (1974). Народный артист Киргизской ССР (1979)[1]. Народный артист СССР (1982). Премия Ленинского комсомола Киргизской ССР в области литературы и искусства (1976) — за исполнение ведущих партий в балетах «Материнское поле» К. Молдобасанова, «Спартак» А. Хачатуряна, «Жизель» А. Адана. Орден «Данакер» (2002). Международная премия имени Чингиза Айтматова (1992). Международная музыкальная премия «Мин-Он» (Япония, 1995). Почётный гражданин городов Гринвилль и Батон-Руж (США)">
+                    </a>
+                    <div class="caption">
+                        <h3>Чолпонбек Базарбаев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/ChyngyzAitmatov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/ChyngyzAitmatov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский, кыргызский и русский писатель дипломат. Родился в 1928 году в селе Шекер Таласского кантона Киргизской АССР (ныне Таласской области. Народный писатель Киргизской ССР (1968), Герой Киргизской Республики (1997), академик АН Киргизской ССР (1974), Герой Социалистического Труда (1978)[9]; лауреат Ленинской (1963) и трёх Государственных премий СССР (1968, 1977, 1983).">
+                    </a>
+                    <div class="caption">
+                        <h3>Чынгыз Айтматов</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/GaparAitiev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/GaparAitiev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский живописец, один из первых профессиональных кыргызских художников, участник Великой Отечественной войны. Родился 15 (28) сентября 1912 года в селе 1-й Тулейкен (ныне — Кара-Сууского района Ошской области. Государственная премия Киргизской ССР имени Токтогула Сатылганова (1967, за серию картин «Земля Киргизская»). Народный художник Киргизской ССР (1954). Народный художник СССР (1971). Член-корреспондент Академии художеств СССР (1973).">
+                    </a>
+                    <div class="caption">
+                        <h3>Гапар Айтиев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/HuceinMuktarov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/HuceinMuktarov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский и кыргызский оперный певец (бас). Лауреат международных и всесоюзных конкурсов оперных певцов (в том числе Второго конкурса молодых музыкантов — исполнителей республик Средней Азии и Казахстана (Ташкент, 1964)). Заслуженный артист Киргизской ССР (1967). Народный артист Киргизской ССР (1973). Народный артист СССР (1984). Орден Дружбы народов (1988)">
+                    </a>
+                    <div class="caption">
+                        <h3>Хусеин Муктаров</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/KalyiMoldobasanov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/KalyiMoldobasanov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский композитор, дирижёр, музыкальный педагог, общественный деятель. Родился 28 сентября 1929 года в селе Терек, Киргизская АССР, РСФСР, ныне Ак-Талинского района Нарынской области. Заслуженный деятель искусств Кыргызской ССР (1967). Народный артист Кыргызской ССР (1974). Народный артист СССР (1979)">
+                    </a>
+                    <div class="caption">
+                        <h3>Калый Молдобасанов</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/KaparMedetbekov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/KaparMedetbekov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title=" Советский кыргызский актёр театра и кино, театральный режиссёр. Родился 11 декабря 1931 года в селе Шекер, ныне в Кара-Бууринском районе Таласской области, Кыргызстан. Народный артист Киргизской ССР (1973)[2]. Народный артист СССР (1991).	Республиканская премия им. М. Рыскулова (1989).	Орден «Манас» 3-й степени (2003)">
+                    </a>
+                    <div class="caption">
+                        <h3>Капар Медетбеков</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/AisuluTokombaeva.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/AisuluTokombaeva.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советская кыргызская артистка балета, танцовщица, балетмейстер, хореограф, педагог. Родилась 22 сентября 1947 года во Фрунзе. Народная артистка Киргизской ССР (1975). Народная артистка СССР (1981). Государственная премия СССР (1976) — за исполнение партии Толгонай в балетном спектакле «Материнское поле» К. Молдобасанова. Премия Ленинского комсомола Киргизской ССР (1970). Международная премия им. Ч. Айтматова">
+                    </a>
+                    <div class="caption">
+                        <h3>Айсулуу Токомбаева</h3>
+                        @**@
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/LeonidYasynovskie.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/LeonidYasynovskie.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский актёр театра и кино, театральный режиссёр. Родился 19 мая 1923 года в Киеве. Заслуженный артист Киргизской ССР (1961). Народный артист Киргизской ССР (1967)[1]. Народный артист СССР (1989). Орден «Знак Почёта» (1 ноября 1958). Орден «Манас» III степени (1997).">
+                    </a>
+                    <div class="caption">
+                        <h3>Леонид Ясиновский</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/MuratbekRyskulov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/MuratbekRyskulov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский актёр театра и кино. Родился 6 декабря 1909 года, селе Чаек, Семиреченская область, Российская империя (ныне Жумгальский район Нарынской области). Народный артист Кыргызской ССР (1951).Народный артист СССР (1958).">
+                    </a>
+                    <div class="caption">
+                        <h3>Муратбек Раскулов</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/SabiraKumushalieva.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/SabiraKumushalieva.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Кыргызская, советская актриса кино и театра. Родилась 19 марта 1917 года в селе Токолдош Фрунзенской области Кыргызской ССР. Герой Кыргызской Республики (2000). орден Дружбы народов (10.10.1990).орден «Знак Почёта» (01.11.1958). Народная артистка Киргизской ССР (1967)">
+                    </a>
+                    <div class="caption">
+                        <h3>Сабира Кумушалиева</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/SairaKiizbaeva.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/SairaKiizbaeva.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Артистка оперы (лирическое сопрано). Родилась 24 октября (7 ноября) 1917, селе Төкөлдөш - 11 октября 1988, Фрунзе. Заслуженная артистка Кыргызской ССР (28.02.1939). Народная артистка Кыргызской ССР (1942). Народная артистка СССР (1958).">
+                    </a>
+                    <div class="caption">
+                        <h3>Сайра Киизбаева</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/SamaraToktakunova.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/SamaraToktakunova.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский музыкант-инструменталист (исполнительница на комузе), педагог. Родилась 9 марта и в 1944 году в селе Кызыл-Суу (по другим источникам — в селе Комсомол[3]) Кеминского района, ныне Чуйской области. Заслуженная артистка Киргизской ССР (1977)[5].	Народная артистка Киргизской ССР (1982). Народная артистка СССР (1989).	Государственная премия Киргизской ССР имени Токтогула Сатылганова (1984). Премия Ленинского комсомола Киргизской ССР (1975). Орден 'Манас' 2-й степени (2019). Орден «Манас» III степени (2005). Медаль «Данк» (2002). Медаль Дружбы (Вьетнам)[6]. Медаль «Отличник труда». Медаль «Астана» (Казахстан). Золотая медаль Всемирной организации интеллектуальной собственности (2006, Швейцария) — за выдающееся исполнительское мастерство. Премия имени М. Ауэзова">
+                    </a>
+                    <div class="caption">
+                        <h3>Самара Токтакунова</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/DarkylKyukova.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/DarkylKyukova.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советская, кыргызская актриса, театра и кино. Родилась 29 октября 1919 года в селе Токолдош Туркестанская АССР,РСФСР, ныне в черте города Бишкек. Избиралась депутатом Верховного Совета Киргизской ССР. Народная артистка Киргизской ССР (1958). Народная артистка СССР (1967)">
+                    </a>
+                    <div class="caption">
+                        <h3>Даркуль Куйукова </h3>
+                        @**@
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/sarkbaevaKayrgul.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/sarkbaevaKayrgul.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советская кыргызская оперная певица (лирико-драматическое сопрано), педагог. Родилась 20 июня 1936 года в селе Карабулак, Кеминского района, (ныне Чуйская область, Киргизия) в семье крестьян. Народная артистка Киргизской ССР (1974). Народная артистка СССР (1980). Премия Ленинского комсомола Киргизской ССР (1974) — за концертную программу 1973—1974 годов. Орден Трудового Красного Знамени. Орден «Знак Почета» Орден ' Манас' 2-й степени (2016)Орден «Манас» 3-й степени (2002). Медаль 'Даңк' (1997). Медаль «В ознаменование 100-летия со дня рождения Владимира Ильича Ленина»">
+                    </a>
+                    <div class="caption">
+                        <h3>Кайыргуль Сартбаева  </h3>
+                        @**@
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/SemenChuikov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/SemenChuikov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский живописец. Родился 17 (30) октября 1902 год в Пишпеке (ныне Бишкек. Сталинская премия II степени (1949) — за серию картин «Киргизская колхозная сюита». Сталинская премия III степени (1951) — за картины «На мирных полях моей Родины», «У подножья Тянь-Шаня», «Утро в совхозе». орден Ленина (06.11.1972).	два ордена Трудового Красного Знамени (01.11.1958). два ордена «Знак Почёта» (07.06.1939). медаль «За трудовое отличие» (11.10.1964). другие медали: орден Кирилла и Мефодия I степени, 	Государственная премия Киргизской ССР имени Токтогула Сатылганова (1972) — за цикл картин «У нас в Киргизской ССР».">
+                    </a>
+                    <div class="caption">
+                        <h3>Семен Чуйков</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/SuimonkulChokmorov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/SuimonkulChokmorov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский актёр кино, художник. Родился 9 ноября 1939 года в аиле Чон-Таш в Киргизской ССР, в предгорье близ Чуйской долины. Член Союза Художников СССР (1967). Заслуженный артист Киргизской ССР (1973). Народный артист Киргизской ССР (1975). Народный артист СССР (1981). Народный художник Киргизской ССР (1990).">
+                    </a>
+                    <div class="caption">
+                        <h3>Суймонкул Чокморов</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/SyunbaiEraliev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/SyunbaiEraliev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский и кыргызский поэт. Родился 15 октября 1921, с. Уч-Эмчек, Семиреченская область, Туркестанская АССР. Награжден орденами Дружбы народов (1981), Отечественной войны 1 степени (1985), «Манас» I и III степеней (2001), медалью «Захиснику Витчизни» (Украина, 1999). Народный поэт Киргизской ССР (1974). Герой Кыргызской Республики (2006). Лауреат Государственной премии Т. Сатылганова (1985), Литературной премии им. А.Фадеева (1981).">
+                    </a>
+                    <div class="caption">
+                        <h3>Суюнбай Эралиев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/ToktonalySietaliev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/ToktonalySietaliev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский оперный певец (лирический тенор), педагог. Родился 3 декабря 1937 года в селе Джайылма, (ныне Панфиловского района, Чуйская область) в семье простых колхозников. Заслуженный артист Киргизской ССР (1972). Народный артист Киргизской ССР (1974).	Народный артист СССР (1984). Государственная премия Киргизской ССР имени Токтогула Сатылганова (1982). Лауреат Международных конкурсов оперных певцов. Почётный профессор Казахской государственной консерватории">
+                    </a>
+                    <div class="caption">
+                        <h3>Токтоналы Сейталиев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/TologonKasymbekov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/TologonKasymbekov.jpg" style="width:200px; height:250px;" alt="Park">
+                    </a>
+                    <div class="caption">
+                        <h3>Тологон Касымбеков</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/TolomushOkeev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/TolomushOkeev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский и кыргызский кинорежиссёр, сценарист. Родился 11 сентября 1935 в селе Боконбаево (ныне - в Тонском районе, Иссык-Кульская область. Народный артист Кыргызской ССР (1975). Заслуженный деятель культуры Польши (1979).	Народный артист СССР (1985). Заслуженный деятель Казахстана (1997). Государственная премия Киргизской ССР имени Токтогула Сатылганова (1972). Премия Ленинского комсомола Кыргызской ССР (1967). Орден Трудового Красного Знамени. Орден «Манас» III степени (1997). Медали. Почётные грамоты Верховного Совета Кыргызской ССР">
+                    </a>
+                    <div class="caption">
+                        <h3>Толомуш Океев</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/TurgunbaiSydykov.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/TurgunbaiSydykov.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский и киргизский скульптор-монументалист, педагог, профессор, академик. Родился 4 ноября 1935 года в селе Говсувар в Киргизии. Герой Социалистического Труда (28 ноября 1991 года). Герой Киргизской Республики (4 февраля 1997 года). орден Ленина (28 ноября 1991 года). орден «Знак Почёта». Народный художник СССР (1986). Народный художник Киргизской ССР. Ленинская премия (1980).	Государственная премия Киргизской ССР имени Токтогула Сатылганова (1982). Премия Ленинского комсомола Киргизской ССР (1967). Золотая медаль Академии художеств СССР">
+                    </a>
+                    <div class="caption">
+                        <h3>Тургунбай Сыдыков</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3" style="text-align:center">
+                <div class="thumbnail">
+                    <a class="lightbox" href="~/images/dostoyanie/EstebesTursunaliev.jpg">
+                        <img class="img-thumbnail" src="~/images/dostoyanie/EstebesTursunaliev.jpg" style="width:200px; height:250px;" alt="Park" data-toggle="tooltip" data-placement="top" title="Советский кыргызский акын (поэт-импровизатор, певец, музыкант-инструменталист, игравший на комузе). Родился 5 мая 1931 года в селе Каинды (по другим источникам — в селе Кара-Арча (ныне Манасского района, Таласская область. Заслуженный артист Киргизской ССР (1964). Народный артист Киргизской ССР (1972).	Народный артист СССР (1988). Народный артист Казахстана (1994).	Государственная премия Киргизской ССР имени Токтогула Сатылганова (1974). Орден «Знак Почёта» (01.11.1958). Орден «Манас» I степени (2001). Медаль «За доблестный труд в Великой Отечественной войне 1941—1945 гг.»">
+                    </a>
+                    <div class="caption">
+                        <h3>Эстебес Турсуналиев</h3>
+                        @**@
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        //$('[data-toggle="tooltip"]').on('inserted.bs.tooltip', function () {
+        //    var thisClass = $(this).attr("class");
+        //    $('.tooltip-inner').addClass(thisClass);
+        //    $('.arrow').addClass(thisClass + "-arrow");
+        //});
+
+        $('[data-toggle="tooltip"]').hover(function () {
+            $('.tooltip-inner').css('min-width', '400px');
+            $('.tooltip-inner').css('color', 'white');
+            $('.tooltip-inner').css('background-color', '#1c7de0');
+             
+        });
+    </script>
+}
+
+

@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "Contacts";
+}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQvjsM3tUV-xEHxs-QOvtkrc2fUBf0yEA"></script>
+
+    <div class="container">
+        <div class="row">
+            @if (ViewBag.lang == 1)
+            {
+                <h3>
+                    Адрес и реквизиты Министерства культуры, информации и туризма
+                    Кыргызской Республики
+                </h3>
+                <div class="col-5">
+                    <p class="font-weight-bolder">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;720040, Кыргызская Республика,<br />
+                        г. Бишкек, ул. Пушкина, 78<br />
+                        <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Тел. – факс: 62-35-89, тел.: 62-04-82<br />
+                        <i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp;www.mkit.gov.kg<br />
+                        <i class="fa fa-at" aria-hidden="true"></i>&nbsp;e-mail: mincultkr@mail.ru<br />
+                        Центральное казначейство при МФ КР<br />
+                        <i class="fa fa-list" aria-hidden="true"></i>&nbsp; л\с 4402011101031186<br />
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp; ИНН 00807200410076<br />
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>&nbsp;ОКПО 23540644<br /><br />
+                        <a href="https://www.facebook.com/minculturegovkg/"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i> </a>&nbsp;
+                        <a href="https://www.instagram.com/min_cult_kg/"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>&nbsp;
+                        <a href="https://www.youtube.com/channel/UCBLTWiQHgtfLqTJPcEK6KmQ/"><i class="fa fa-youtube fa-3x" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+                <div class="col-7">
+                    <input type="button" class="btn btn-primary" value="Показать на карте" onclick="DisplayGoogleMap()" />
+                    <div id="myDiv" style="width:100%;height:400px;"></div>
+                </div>
+            }
+            else
+            {
+                <h3>
+                    Кыргыз Республикасынын Маданият, маалымат жана туризм
+                    министрлгинин дареги жана реквизиттери
+                </h3>
+                <div class="col-5">
+                    <p class="font-weight-bolder">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; 720040, Кыргыз Республикасы,<br />
+                        Бишкек ш., Пушкин көч., 78<br />
+                        <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Тел. – факс: 62-35-89, тел.: 62-04-82<br />
+                        <i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp; www.mkit.gov.kg<br />
+                        <i class="fa fa-at" aria-hidden="true"></i>&nbsp; e-mail: mkit@mail.ru<br />
+                        КР ФМ Борбордук казыналыгы<br />
+                        <i class="fa fa-list" aria-hidden="true"></i>&nbsp;ө\эсеби 4402011101031186<br />
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp; ИСН 00807200410076<br />
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>&nbsp; ИУРК 23540644<br />
+                        <a href="https://www.facebook.com/minculturegovkg/"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i> </a>&nbsp;
+                        <a href="https://www.instagram.com/min_cult_kg/"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>&nbsp;
+                        <a href="https://www.youtube.com/channel/UCBLTWiQHgtfLqTJPcEK6KmQ/"><i class="fa fa-youtube fa-3x" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+                <div class="col-7">
+                    <input type="button" class="btn btn-primary" value="Картада корсоту" onclick="DisplayGoogleMap()" />
+                    <div id="myDiv" style="width:100%;height:400px;"></div>
+                </div>
+            }
+        </div>
+    </div>
+
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    //Set the Latitude and Longitude of the Map
+    //    //42.877424, 74.605421
+    //    //42.876717, 74.605391
+    //    var myAddress = new google.maps.LatLng(42.876717, 74.605391);
+
+    //    //Create Options or set different Characteristics of Google Map
+    //    var mapOptions = {
+    //        center: myAddress,
+    //        zoom: 15,
+    //        minZoom: 15,
+    //        mapTypeId: google.maps.MapTypeId.ROADMAP
+    //    };
+
+    //    //Display the Google map in the div control with the defined Options
+    //    var map = new google.maps.Map(document.getElementById("myDiv"), mapOptions);
+
+    //    //Set Marker on the Map
+    //    var marker = new google.maps.Marker({
+    //        position: myAddress,
+    //        animation: google.maps.Animation.BOUNCE,
+    //        title: "Министерство культуры, информации и туризма Кыргызской Республики"
+    //    });
+
+    //    marker.setMap(map);
+    //});
+    function DisplayGoogleMap() {
+
+        //Set the Latitude and Longitude of the Map
+        //42.877424, 74.605421
+        //42.876717, 74.605391
+        var myAddress = new google.maps.LatLng(42.876717, 74.605391);
+
+        //Create Options or set different Characteristics of Google Map
+        var mapOptions = {
+            center: myAddress,
+            zoom: 15,
+            minZoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        //Display the Google map in the div control with the defined Options
+        var map = new google.maps.Map(document.getElementById("myDiv"), mapOptions);
+
+        //Set Marker on the Map
+        var marker = new google.maps.Marker({
+            position: myAddress,
+            animation: google.maps.Animation.BOUNCE,
+            title: "Министерство культуры, информации и туризма Кыргызской Республики",
+        });
+
+        marker.setMap(map);
+    }
+</script>  

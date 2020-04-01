@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "MyzeinyeZdanie";
+}
+
+
+<div class="container">
+    <br />
+    <br />
+    @if (ViewBag.Lang == 1)
+    {
+        <div class="row">
+
+            <p><h4>Характер зданий, в которых расположены музеи</h4> </p>
+            <p>
+
+                <table class="table">
+                    <thead>
+                        <tr style="background-color:darkkhaki">
+                            <td>№</td>
+                            <td>Название музея</td>
+                            <td>Профиль  музея</td>
+                            <td>Область</td>
+                            <td>Тип здания</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int id = 1;}
+                        @foreach (var item in ViewBag.Zdanie)
+                        {
+                            <tr>
+                                <td>@id</td>
+                                <td>@item.Name</td>
+                                <td>@item.Profil</td>
+                                <td>@item.Oblast</td>
+                                <td>@item.TipZdania</td>
+                            </tr>
+                            { id++; }
+                        }
+                    </tbody>
+                </table>
+            </p>
+
+        </div>
+    }
+</div>
+

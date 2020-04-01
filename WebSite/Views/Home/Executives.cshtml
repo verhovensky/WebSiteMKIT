@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewData["Title"] = "Executives";
+}
+
+<!-- руководство -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Руководство</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card text-center" style="width:300px;height:400px;">
+                    <img class="card-img-top" src="~/health/images/ministr.jpg" style="margin-top:0px;" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Министр</h4>
+                        <a asp-controller="Home" asp-action="Ministr">
+                            <p class="card-text">Жаманкулов Азамат Капарович</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        
+        <br />
+        <div class="row">
+            <div class="card-deck  text-center">
+
+                <div class="card" style="width: 18rem;">
+                    @*<img class="card-img-top img-thumbnail" src="~/health/images/executives/e_3.jpg" alt="...">*@
+                    <div class="card-body">
+                        <h4 class="card-title">Секимов Бактыбек Шайыкбекович</h4>
+                        <a asp-controller="Home" asp-action="Stat">
+                            <p class="card-text">Статс-секретарь</p>
+                        </a>
+                         
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    @*<img class="card-img-top img-thumbnail" src="~/health/images/executives/e_1.jpg" alt="...">*@
+                    <div class="card-body">
+                        <h4 class="card-title">Дамир уулу Максат</h4>
+                        @if (ViewBag.Lang == 2)
+                        {
+                            <a href="~/docs/Rezume/ministr_kyrg.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                                <p class="card-text">Министрдин орун басары</p>
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="~/docs/Rezume/ministr_rus.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                                <p class="card-text">Заместитель министра</p>
+                            </a>
+                        }
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 18rem;">
+                    @*<img class="card-img-top img-thumbnail" src="~/health/images/executives/e-2.jpg" alt="...">*@
+                    <div class="card-body">
+                        <h4 class="card-title">Иманалиев Кайрат  Олжобаевич</h4>
+                        @if (ViewBag.Lang == 2)
+                        {
+                            <a href="~/docs/Rezume/zamministra_kyrg1.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                                <p class="card-text">Министрдин орун басары</p>
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="~/docs/Rezume/zamministra_rus1.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                                <p class="card-text">Заместитель министра</p>
+                            </a>
+                        }
+
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    @*<img class="card-img-top img-thumbnail" src="~/health/images/executives/e-2.jpg" alt="...">*@
+                    <div class="card-body">
+                        <h4 class="card-title">Кадырбеков Нуржигит Кадырбекович -</h4>
+                        @if (ViewBag.Lang == 2)
+                        {
+                            <a href="~/docs/Rezume/zamministra_kyrg3.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                                <p class="card-text">Министрдин орун басары</p>
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="~/docs/Rezume/zamministra_rus3.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                                <p class="card-text">Заместитель министра</p>
+                            </a>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+            <br /><br />
+      
+            
+    @*<div class="card-deck  text-center">
+
+            <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                    <p class="card-text">
+                        720040, Кыргыз Республикасы,
+                        <br />
+
+                        Бишкек ш., Пушкин көч., 78
+                        <br />
+
+                        Тел. – факс: 62-35-89, тел.: 62-04-82
+                        <br />
+                        www.minculture.gov.kg
+                        <br />
+                        e-mail: mincultkr@mail.ru
+                        <br />
+                        КР ФМ Борбордук казыналыгы
+                        <br />
+                        ө\эсеби 4402011101031186
+                        <br />
+                        ИСН 00807200410076
+                        <br />
+                        ИУРК 23540644
+                        <br />
+                    </p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+
+                    <p class="card-text">
+
+                        720040, Кыргызская Республика,
+                        <br />
+                        г. Бишкек, ул. Пушкина, 78
+                        <br />
+                        Тел. – факс: 62-35-89, тел.: 62-04-82
+                        <br />
+                        www.minculture.gov.kg
+                        <br />
+                        e-mail: mincultkr@mail.ru
+                        <br />
+                        Центральное казначейство при МФ КР
+                        <br />
+                        л\с 4402011101031186
+                        <br />
+                        ИНН 00807200410076
+                        <br />
+                        ОКПО 23540644
+                        <br />
+                    </p>
+                </div>
+            </div>
+
+        </div>*@
+        <br>
+        <br>
+
+    </div>
+        <br>
+        <br>

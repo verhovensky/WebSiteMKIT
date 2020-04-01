@@ -1,0 +1,3 @@
+﻿pg_dump -U postgres webdb > c:\tmp\webdb.sql
+psql -U db_user db_name < dump_name.sql
+Sosservice!9

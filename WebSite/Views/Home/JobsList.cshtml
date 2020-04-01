@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "JobsList";
+}
+
+<div class="row">
+    <div class="col text-center">
+        <h3>Вакансии министерства </h3>
+    </div>
+
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td width="20%"><strong>Дата публикации</strong> </td>
+                    <td width="60%"><strong> Вакансии</strong></td>
+                    <td width="20%"><strong> Срок подачи документов</strong></td>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    01.02.2020
+                </td>
+                <td>
+                    <a href="~/docs/vakansion/job1.pdf" class="embed">
+                        Конкурс на замещение следующей вакантной административной государственной должности в территориальном представительстве
+                    </a>
+                </td>
+                <td>
+                    15.02.2020
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+
+@section scripts{
+    <script>
+
+    $('a.embed').gdocsViewer();
+      //var viewer;
+
+      //$(function() {
+      //  viewer = new PDFViewer($('#viewer'));
+      //});
+    </script>
+}

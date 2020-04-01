@@ -1,0 +1,74 @@
+﻿@model IEnumerable<WebSite.Models.ContactsPodvedPodrz>
+
+@{
+    ViewData["Title"] = "ContactsPodved";
+}
+
+<div class="container ">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            @if (ViewBag.Lang == 1)
+            {
+                <h3>Подведомственные подразделения</h3>
+            }
+            else
+            {
+                <h3>Ведомстволук түзүмдөр </h3>
+            }
+            <br /><br />
+            @foreach (var item in Model)
+            {
+                
+                <br />
+                <table class="table">
+                    <tr>
+                        <td width="10%"></td>
+                        <td width="80%"> <div class="text-center"><strong>@Html.DisplayFor(modelItem => item.Name)</strong>  </div></td>
+                        <td width="10%"></td>
+                    </tr>
+                </table>
+                <br />
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            @if (ViewBag.Lang == 1)
+                            {
+                                <th>Директор</th>
+                                <th>Адрес</th>
+                                <th>Контакты </th>
+                            }
+                            else
+                            {
+                                <th>Мүдүр</th>
+                                <th>Дарек</th>
+                                <th>Байланыш</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Director)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contacts)<br />
+                                <i class="fa fa-phone"></i>&nbsp; @Html.DisplayFor(modelItem => item.Phone)<br />
+                                <i class="fa fa-phone-square"></i>&nbsp;Fax:
+                                @Html.DisplayFor(modelItem => item.Fax)<br />
+                                <i class="fa fa-at"></i>&nbsp;Email:
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            }
+
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>

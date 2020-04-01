@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewData["Title"] = "NKN";
+}
+
+
+<div class="container">
+
+    @if (ViewBag.Lang == 1)
+    {
+        
+
+        <div class="row">
+            <div class="col text-center">
+                <h4> Нематериальное культурное наследие</h4>
+            </div>
+        </div>
+        <br> 
+
+        <table class="table">
+            <tr>
+                <td></td>
+                <td>
+                    <a href="~/docs/NKN/perechenrus.pdf" target="_blank">
+                        <h6>
+                            НАЦИОНАЛЬНЫЙ ПЕРЕЧЕНЬ <br />
+                            элементов нематериального культурного наследия
+                        </h6>
+                        @*<a href="~/docs/NKN/perechenrus.pdf" target="_blank">*@
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a class="dropdown-item text-primary" asp-controller="Home" asp-action="NKNPolojenie">
+                        <h6>
+                            ПОЛОЖЕНИЕ <br />
+                            о порядке оказания содействия научным, техническим
+                            и искусствоведческим исследованиям в сфере нематериального <br />
+                            культурного наследия, находящегося под угрозой исчезновения
+                        </h6>
+                    </a>
+                    @*<a href="~/docs/NKN/PolojenieOPor.pdf" target="_blank">*@
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a class="dropdown-item text-primary" asp-controller="Home" asp-action="NKNPolojenie2">
+                        <h6>
+                            Положение <br />
+                            об осуществлении идентификации и определения различных
+                            элементов нематериального культурного наследия
+                        </h6>
+                    </a>
+                    @*<a href="~/docs/NKN/PolojenieObOs.pdf" target="_blank">*@
+                </td>
+            </tr>
+        </table> 
+
+    }
+    else
+    {
+        <br><br>
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>
+                    Материалдык эмес маданий
+                    мурасы
+                </h3>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="card-deck  text-center">
+            <div class="card text-white text-center bg-light mb-3" style="max-width: 30rem;">
+                <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                <div class="card-img-overlay">
+                    <h6 class="card-title">
+                        КЫРГЫЗ РЕСПУБЛИКАСЫНЫН МЫЙЗАМЫ  Кыргыз Республикасынын материалдык эмес маданий
+                        мурасы жөнүндө
+                    </h6>
+                    <p class="card-text text-center">
+                        <a href="~/docs/NKN/zakonrus.pdf" target="_blank">
+                            <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card text-white text-center bg-light mb-3" style="max-width: 30rem;">
+                <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                <div class="card-img-overlay">
+                    <h6 class="card-title">
+                        УЛУТТУК ТИЗМЕ
+                    </h6>
+                    <p class="card-text text-center">
+                        <a href="~/docs/NKN/perechenkyrg.pdf" target="_blank">
+                            <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+
+    <br>
+    <br>
+</div>

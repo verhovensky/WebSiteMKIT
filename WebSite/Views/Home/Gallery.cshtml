@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+}
+<style>
+    .blue {
+       
+    }
+</style>
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<link rel="stylesheet" href="~/css/gallery-clean.css">
+ 
+<div class="container gallery-container" style="display:normal;" >
+
+    <h3>@ViewBag.Theme</h3>
+
+
+    <div class="tz-gallery">
+
+        <div class="row">
+            @{ string imagename = "";}
+            @for (int i = 1; i < 27; i++)
+            {
+                { imagename = i.ToString() + ".jpg"; }
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a class="lightbox" href="@Url.Content(String.Format("~/health/images/Gallery/{0}", imagename))">
+                            <img  class="img-thumbnail" src="@Url.Content(String.Format("~/health/images/Gallery/{0}", imagename))" alt="Park">
+                        </a>
+                        @*<div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>*@
+                    </div>
+                </div>
+            }
+
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+
+    </script>
+}
+
+
+
+@*<div class="container">
+
+        <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">@ViewBag.Theme</h1>
+
+        <hr class="mt-2 mb-5">
+
+        <div class="row text-center text-lg-left">
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/2.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/3.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/4.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/5.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/6.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/7.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/8.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/9.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/10.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/11.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="~/health/images/Gallery/12.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>*@

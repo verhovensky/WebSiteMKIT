@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewData["Title"] = "Туризм";
+}
+
+
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <h4 class="text-center">Туризм</h4>
+    </div>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <td width="100"></td>
+        <td>
+            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="TurizmODep">
+                <h5>
+                    O Департаменте туризма  при МКИТ КР
+                </h5>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td width="100"></td>
+        <td>
+            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="TurizmHozSub">
+                <h5>
+                    Хозяйствующие субъекты сферы туризма.
+                </h5>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td width="100"></td>
+        <td>
+            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="TurizmReestr">
+                <h5>
+                    Единый государственный реестр субъектов туристской деятельности Кыргызской Республики
+                </h5>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td width="100"></td>
+        <td>
+            <a class="dropdown-item text-primary" asp-controller="Home" asp-action="TurizmPerechen">
+                <h5>
+                    Перечень
+                    международных туристических мероприятий по продвижению туристического потенциала
+                </h5>
+            </a>
+        </td>
+    </tr>
+</table>
+
+
+@*<div class="container ">
+
+        <div class="row">
+            <div class="col text-center">
+                <h3>Департамент туризма при Министерстве культуры, информации и туризма Кыргызской Республики</h3>
+            </div>
+            <br /><br />
+        </div>
+        <div class="row">
+            <div class="card-deck">
+
+                <div class="card text-white text-center bg-light mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            ЗАКОН КЫРГЫЗСКОЙ РЕСПУБЛИКИ
+                        </h6>
+                        <h6 class="card-subtitle mb-2"> О туризме</h6>
+                        <p class="card-text text-center">
+                            <a href="~/docs/Turizm/ZakonOTurizm.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-white text-center bg-info mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            ЗАКОН КЫРГЫЗСКОЙ РЕСПУБЛИКИ
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-white"> Об особо охраняемых природных территориях</h6>
+                        <p class="card-text">
+                            <a href="~/docs/Turizm/ZakonObOhran.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-white text-center bg-info mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            ЗАКОН КЫРГЫЗСКОЙ РЕСПУБЛИКИ
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-white"> О биосферных территориях в Кыргызской Республике</h6>
+                        <p class="card-text">
+                            <a href="~/docs/Turizm/ZakonOBios.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card-deck">
+
+                <div class="card text-white text-center bg-info mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            ИНСТРУКЦИЯ
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-white"> о порядке оформления виз Кыргызской Республики</h6>
+                        <p class="card-text">
+                            <a href="~/docs/Turizm/Instruction.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-white text-center bg-info mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            НУСКАМА
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-white">
+                            Кыргыз Республикасынын визаларын тариздөө тартиби
+                            жөнүндө
+                        </h6>
+                        <p class="card-text">
+                            <a href="~/docs/Turizm/Nuskama.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-white text-center bg-info mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            ПОЛОЖЕНИЕ
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-white">
+                            о Департаменте туризма при МКИТ
+                        </h6>
+                        <p class="card-text">
+                            <a href="~/docs/Turizm/ZakonOBios.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card-deck">
+
+                <div class="card text-white text-center bg-info mb-3" style="max-width: 30rem;">
+                    <img class="card-img" src="~/health/images/carduzor.png" alt="...">
+                    <div class="card-img-overlay">
+                        <h6 class="card-title">
+                            ЖОБО
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-white">
+                            Маданият, маалымат жана
+                            туризм министрлигинин алдындагы Туризм департаменти
+                            жөнүндө
+                        </h6>
+                        <p class="card-text">
+                            <a href="~/docs/Turizm/Instruction.pdf" target="_blank">
+                                <i class="fa fa-address-book fa-3x" aria-hidden="true"></i>&nbsp;
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>*@

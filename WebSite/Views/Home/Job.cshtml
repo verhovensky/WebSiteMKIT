@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Job";
+}
+@*<link rel="stylesheet" href="~/css/pdfViewer.css" />
+ 
+<div id="viewer" class="pdf-viewer" style="height:1200px;" data-url='@Url.Content("~/docs/vakansion/job1.pdf")'></div>
+  
+<script src="~/lib/pdf.js"></script>
+<script src="~/js/bootstrap-pdf-viewer.js"></script>*@
+    <a href="~/docs/vakansion/job1.pdf" class="embed">Download file</a>
+
+
+
+@section scripts{ 
+<script>
+
+    $('a.embed').gdocsViewer();
+      //var viewer;
+
+      //$(function() {
+      //  viewer = new PDFViewer($('#viewer'));
+      //});
+</script>
+    }

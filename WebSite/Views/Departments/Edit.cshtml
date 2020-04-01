@@ -1,0 +1,78 @@
+﻿@model WebSite.Models.Departments
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Редактирование</h2>
+
+ 
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Lang" />
+            <table class="table">
+                <tr>
+                    <td width="200"><label asp-for="Name" class="control-label"></label></td>
+                    <td width="300"><input asp-for="Name" class="form-control" /></td>
+                    <td> <span asp-validation-for="Name" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Director" class="control-label"></label></td>
+                    <td><input asp-for="Director" class="form-control" /></td>
+                    <td><span asp-validation-for="Director" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Address" class="control-label"></label></td>
+                    <td><input asp-for="Address" class="form-control" /></td>
+                    <td><span asp-validation-for="Address" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Contacts" class="control-label"></label></td>
+                    <td><input asp-for="Contacts" class="form-control" /></td>
+                    <td><span asp-validation-for="Contacts" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Phone" class="control-label"></label></td>
+                    <td><input asp-for="Phone" class="form-control" /></td>
+                    <td><span asp-validation-for="Phone" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Fax" class="control-label"></label></td>
+                    <td><input asp-for="Fax" class="form-control" /></td>
+                    <td><span asp-validation-for="Fax" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Email" class="control-label"></label></td>
+                    <td><input asp-for="Email" class="form-control" /></td>
+                    <td><span asp-validation-for="Email" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="Добавить" class="btn btn-primary" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

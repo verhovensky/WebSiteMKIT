@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = " Дни работников культуры";
+}
+<script src="~/js/modernizr.js"></script> <!-- Modernizr -->
+<link rel="stylesheet" href="~/css/style.css" />
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <h4 class="text-center">
+            Дни работников культуры
+        </h4>
+    </div>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <td width="100"></td>
+        <td>
+            <a href="#Postanovlenie" data-toggle="modal" data-target="#Postanovlenie">
+                ПОСТАНОВЛЕНИЕ ПРАВИТЕЛЬСТВА КЫРГЫЗСКОЙ РЕСПУБЛИКИ<br />
+                О Дне работников культуры
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="100"></td>
+        <td>
+            <a href="#Pechat" data-toggle="modal" data-target="#Pechat">
+                День работников информации и печати
+            </a>
+        </td>
+    </tr>
+
+</table>
+
+<div class="modal" id="Pechat" data-easein="swoopIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <p>
+                    День работников информации и печати
+                </p>
+                <button type="button" class="close bg-primary" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p class="text-justify">
+                    Профессиональный праздник всех работников средств массовой информации, радио и телевидения, полиграфии, издательств, книжной торговли Кыргызстана — День информации и печати — установлен Постановлением Правительства Республики № 527 от 1 ноября 1993 года в день выхода в свет первого номера национальной газеты «Эркин Тоо» (ныне «Кыргыз Туусу») — 7 ноября 1924 года.
+                </p>
+                <p class="text-justify">
+                    Возникновение периодической печати в Кыргызстане приходится на 1913 год, когда представителями прогрессивной русской интеллигенции был основан и издан «Пржевальский сельский хозяин» в объеме 16-18 страниц, тиражом в 1 тысячу экземпляров, в котором публиковались материалы сельскохозяйственного назначения. После выхода 4 номеров выпуск журнала был прекращен. Однако, это издание осталось в истории Кыргызстана первым печатным изданием.
+                </p>
+
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                @*<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal" id="Postanovlenie" data-easein="swoopIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <p>
+                    ПОСТАНОВЛЕНИЕ ПРАВИТЕЛЬСТВА КЫРГЫЗСКОЙ РЕСПУБЛИКИ
+                </p>
+                <button type="button" class="close bg-primary" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h6>О Дне работников культуры</h6>
+                <p class="text-justify">
+                    Учитывая важность и непреходящее значение культуры в духовной жизни народа Кыргызстана, и в связи с тем, что 2 ноября 1926 года впервые в истории Кыргызской национальной драмы была поставлена пьеса М.Токобаева "Кайгылуу Какей", а также в целях развития культуры и искусства Правительство Кыргызской Республики постановляет:
+                </p>
+                <p>
+                    Установить 2 ноября ежегодно отмечаемым Днем работника культуры.
+                </p>
+                <p>
+                    Премьер-министр Кыргызской Республики                            А.Джумагулов
+                </p>
+
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                @*<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section scripts{
+    <script src="~/js/main.js"></script>
+}

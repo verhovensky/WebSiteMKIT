@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "SubordinatedInstitutions";
+}
+
+<div class="departments">
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="section_title">
+                    <h4>
+                        Подведомственные учреждения министерства культуры, информации и туризма КР
+                    </h4>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Театрально - зрелищные учреждения</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Музеи </a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Учебные заведения</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Библиотеки </a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-dosug" role="tab" aria-controls="dosug">Культурно- досуговые учреждения </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                        <ul class="list-group">
+                            @*<li class="list-group-item"></li>*@
+                            <li class="list-group-item list-group-item-primary">Национальные театры – по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            @*<li class="list-group-item list-group-item-secondary">This is a secondary list group item</li>*@
+                            <li class="list-group-item list-group-item-success">Государственные театры –– по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-danger">Областные театры  – по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-warning">Филармонии - по списку ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-info">Цирк- ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-light">This is a light list group item</li>
+                            <li class="list-group-item list-group-item-dark">This is a dark list group item</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-primary">Национальные музеи - по списку  фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-success">Государственные музеи- по списку  фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-danger">Областные музеи - по списку  фото руководителя и ссылка на сайт если есть</li>
+                            @*<li class="list-group-item list-group-item-warning">Филармонии - по списку ФИО, фото руководителя и ссылка на сайт если есть</li>
+                                <li class="list-group-item list-group-item-info">Цирк- ФИО, фото руководителя и ссылка на сайт если есть</li>
+                                <li class="list-group-item list-group-item-light">This is a light list group item</li>
+                                <li class="list-group-item list-group-item-dark">This is a dark list group item</li>*@
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-warning">ВУЗы - ФИО, по списку  фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-info">ССПУЗ - по списку, ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-secondary">Музыкальные школы - по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-primary">Республиканские библиотеки - по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-success">Областные библиотеки - по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-danger">Районные библиотеки - по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-warning">Городские библиотеки - по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-info">Сельские библиотеки - по списку - ФИО, фото руководителя и ссылка на сайт если есть</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="list-dosug" role="tabpanel" aria-labelledby="list-dosug-list">
+                        <ul class="list-group">
+
+                            <li class="list-group-item list-group-item-warning">Районные клубы - по списку ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-info">Городские клубы - по списку ФИО, фото руководителя и ссылка на сайт если есть</li>
+                            <li class="list-group-item list-group-item-dark">сельские клубы- по списку ФИО, фото руководителя и ссылка на сайт если есть.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="NPA\informpolitics\_%24 КР по реорганизации_исправ.doc" />
+    <Content Include="NPA\informpolitics\Закон КР  О лицензионно-разрешительной системе в Кыргызской Республике _1.doc" />
+    <Content Include="NPA\informpolitics\Закон КР  О телевидении и радиовещании .doc" />
+    <Content Include="NPA\informpolitics\Закон КР  О телевидении и радиовещании _1.doc" />
+    <Content Include="NPA\informpolitics\Закон КР  Об основах административной деятельности и административных процедурах .doc" />
+    <Content Include="NPA\informpolitics\Закон РК  О средствах массовой информации .doc" />
+    <Content Include="NPA\informpolitics\Закон РК  О средствах массовой информации _1.doc" />
+    <Content Include="NPA\informpolitics\Кодекс Кыргызской Республики о нарушениях_2.doc" />
+    <Content Include="NPA\informpolitics\Кыргыз Республикасынын Маданият, маалымат жана туризм министрлиги жөнүндө.doc" />
+    <Content Include="NPA\informpolitics\Положение о выдаче разрешения на размещение телерадиоканала в аналоговом….doc" />
+    <Content Include="NPA\informpolitics\Положение о выдаче разрешения на размещение телерадиоканала в аналоговом…_1.doc" />
+    <Content Include="NPA\informpolitics\Положение о Департаменте информации и массовых коммуникаций при Министерстве культуры….doc" />
+    <Content Include="NPA\informpolitics\Положение о Департаменте информации и массовых коммуникаций при Министерстве культуры…_1.doc" />
+    <Content Include="NPA\informpolitics\Положение о Министерстве культуры, информации и туризма КР.doc" />
+    <Content Include="NPA\informpolitics\Положение о порядке формирования Социального пакета телеканалов и или радиоканалов….doc" />
+    <Content Include="NPA\informpolitics\Положение о порядке формирования Социального пакета телеканалов и или радиоканалов…_1.doc" />
+    <Content Include="NPA\informpolitics\Постановление Правительства КР от 9 октября 2014 года № 593.doc" />
+    <Content Include="NPA\informpolitics\Постановление Правительства КР от 9 октября 2014 года № 593_1.doc" />
+    <Content Include="NPA\kono\Жобо депкино.docx" />
+    <Content Include="NPA\kono\закон о господдержке кинемат. на кыргзыском.docx" />
+    <Content Include="NPA\kono\закон о господдержке кинемат. на русском.docx" />
+    <Content Include="NPA\kono\Инфо для Айнуры МКИТ.docx" />
+    <Content Include="NPA\kono\Положение о Департаменте кинематографии при Министерстве культуры....doc" />
+    <Content Include="NPA\kono\постановление 590 от 1999г..docx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Test\Controllers\" />
+    <Folder Include="Areas\Test\Data\" />
+    <Folder Include="Areas\Test\Models\" />
+    <Folder Include="Areas\Test\Views\" />
+    <Folder Include="wwwroot\docs\vakansion\" />
+    <Folder Include="wwwroot\health\images\news\" />
+    <Folder Include="wwwroot\health\images\executives\" />
+    <Folder Include="wwwroot\health\images\Gallery\" />
+    <Folder Include="wwwroot\images\dostoyanie\" />
+    <Folder Include="wwwroot\images\dostoyanie2\" />
+    <Folder Include="wwwroot\images\dostoyanie3\" />
+    <Folder Include="wwwroot\plagins\OwlCarousel2-2.2.1\" />
+    <Folder Include="wwwroot\plagins\font-awesome-4.7.0\" />
+    <Folder Include="wwwroot\plagins\greensock\" />
+    <Folder Include="wwwroot\plagins\parallax-js-master\" />
+    <Folder Include="wwwroot\plagins\progressbar\" />
+    <Folder Include="wwwroot\plagins\scrollmagic\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.HttpOverrides" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.0-preview1.19508.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0-preview1.19506.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0-preview1.19506.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.1.2" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties wwwroot_4lib_4bootstrap_4dist_4css_4bootstrap_1css_1map__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+
+
+</Project>

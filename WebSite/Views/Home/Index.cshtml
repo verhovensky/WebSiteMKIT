@@ -1,0 +1,485 @@
+﻿@model IEnumerable<WebSite.Models.ListOfResources>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .vert .carousel-item-next.carousel-item-left,
+    .vert .carousel-item-prev.carousel-item-right {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .vert .carousel-item-next,
+    .vert .active.carousel-item-right {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100% 0);
+    }
+
+    .vert .carousel-item-prev,
+    .vert .active.carousel-item-left {
+        -webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+    }
+
+    .imgramka {
+        border-width: 10px; /* Толщина границы */
+        background-color: rgb(163, 149, 149); /*rgba(255,255,255,0.9);*/
+        padding: 10px;
+    }
+
+    .full-width {
+        width: 95vw;
+        margin-left: -7vw;
+        left: 7%;
+    }
+
+    p.dline {
+        line-height: 1.2em;
+    }
+
+    a.mylink {
+        color: white;
+    }
+</style>
+
+
+
+<br />
+<br />
+
+<!-- Give this div your desired background color -->
+<div class="row">
+    <div class="col-md-3">
+        <div class="container">
+            <div class="row text-center">
+                <img class="d-block mx-auto img-fluid imgramka" src="~/health/images/ministr.jpg" alt="First slide" />
+                <br />
+                <h5>
+                    <strong> Уважаемые посетители сайта!</strong>
+                </h5>
+                <p class="text-sm-center">
+                    <strong>
+                        Добро пожаловать  на официальный сайт Министерства культуры, информации и туризма Кыргызской Республики!
+                    </strong>
+                </p>
+                <p class="text-sm-center">
+                    <strong> Министр Азамат Жаманкулов!</strong>
+                </p>
+            </div>
+            <br />
+            <p></p>
+
+            <table class="table bg-primary" style="font-size:13px;">
+                <tr>
+                    <td colspan="2">
+                        <h4 class="text-white">Контакты:</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-phone fa-2x text-white" aria-hidden="true"></i>
+                    <td class="text-white">Телефон доверия:<br /> +996 312 62-60-24</td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-hourglass-1 fa-2x text-white" aria-hidden="true"></i>
+                    </td>
+                    <td class="text-white">Пн-Пт, 09:00-18:00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-map-marker fa-2x text-white" aria-hidden="true"></i>
+                    </td>
+                    <td class="text-white">
+                        720040, Кыргызская Республика,
+                        г. Бишкек, ул. Пушкина, 78
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-phone fa-2x text-white" aria-hidden="true"></i>
+                    </td>
+                    <td class="text-white">Телефон приемной:<br />+996 312 62-04-82 </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-wpforms fa-2x text-white" aria-hidden="true"></i>
+                    </td>
+                    <td class="text-white">Факс.:<br /> +996 312 62-35-89</td>
+                </tr>
+
+            </table>
+            <br />
+
+            @foreach (var item in Model)
+            {
+        <div class="card">
+            @Html.Raw(item.Links)
+            @*<div class="card text-white bg-primary mb-12" style="max-width: 30rem; height:100px">*@
+            <img class="card-img-top" src="~/images/11.png" style="margin-top:0px;" alt="Card image">
+            <div class="card-img-overlay text-center">
+                <p class="text-white" style="font-size: 16px;">@Html.DisplayFor(modelItem => item.Name)</p>
+                @Html.Raw("</a>")
+
+            @*</div>*@
+        </div>
+                </div> 
+                <br />
+            }
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col text-center">
+            <h3>Новости</h3>
+        </div>
+        <br />
+        <table class="table">
+            <tr>
+                <td width="200"><img width="100%" src="~/health/images/news/news-1.jpg" alt="" /></td>
+                <td width="500">
+                    Министр культуры, информации и туризма КР Азамат Жаманкулов принял делегацию во главе с первым вице-президентом JICA Кадзухико Кошикава.
+                    <br /> <a asp-action="News5" asp-controller="News">Читать дальше</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="200"><img width="100%" src="~/health/images/news/news-2.jpg" alt="" /></td>
+                <td width="500">
+                    Баткен облусунда Абдыкадыр Орозбековдун 130 жылдыгына карата эл аралык илимий – практикалык конференция өтүп жатат.
+                    <br /> <a asp-action="News5" asp-controller="News">Читать дальше</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="200"><img width="100%" src="~/health/images/news/news-3.jpg" alt="" /></td>
+                <td width="500">
+                    Кызматташуу боюнча кыргыз-сауд биргелешкен комитетинин 2-жыйынынын Протоколуна кол коюлду
+                    <br /> <a asp-action="News5" asp-controller="News">Читать дальше</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="200"><img width="100%" src="~/health/images/news/news-4.jpg" alt="" /></td>
+                <td width="500">
+                    В Национальной библиотеке Кыргызской Республики имени Алыкула Осмонова состоялась научно-практическая Конференция
+                    <br /> <a asp-action="News5" asp-controller="News">Читать дальше</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="200"><img width="100%" src="~/health/images/news/news-5.jpg" alt="" /></td>
+                <td width="500">
+                    СССРдин эл артисти Калый Молдобасановдун 90 жылдыгы белгиленди
+                    <br /> <a asp-action="News5" asp-controller="News">Читать дальше</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-3">
+
+
+        <div class="card">
+            <a href="http://president.kg/ru/sobytiya/12801_strategiya_sovershenstvovaniya_zakonodatelstva_kirgizskoy_respubliki_o_viborah_na_2018_2020_gg_" target="_blank">
+                <img class="card-img-top" src="~/images/1.png" style="margin-top:0px;" alt="Card image">
+            </a>
+        </div>
+        <br />
+        <div class="card">
+            <a href="http://president.kg/ru/sobytiya/12801_strategiya_sovershenstvovaniya_zakonodatelstva_kirgizskoy_respubliki_o_viborah_na_2018_2020_gg_" target="_blank">
+                <img class="card-img-top" src="~/images/2.png" style="margin-top:0px;" alt="Card image">
+            </a>
+        </div>
+        <br />
+        <div class="card">
+            <a href="http://president.kg/ru/sobytiya/12801_strategiya_sovershenstvovaniya_zakonodatelstva_kirgizskoy_respubliki_o_viborah_na_2018_2020_gg_" target="_blank">
+                <img class="card-img-top" src="~/images/3.png" style="margin-top:0px;" alt="Card image">
+            </a>
+        </div>
+        <br />
+        <div class="card">
+            <a href="http://president.kg/ru/sobytiya/12801_strategiya_sovershenstvovaniya_zakonodatelstva_kirgizskoy_respubliki_o_viborah_na_2018_2020_gg_" target="_blank">
+                <img class="card-img-top" src="~/images/4.png" style="margin-top:0px;" alt="Card image">
+            </a>
+        </div>
+        <br />
+        <div class="card">
+            <a href="http://president.kg/ru/sobytiya/12801_strategiya_sovershenstvovaniya_zakonodatelstva_kirgizskoy_respubliki_o_viborah_na_2018_2020_gg_" target="_blank">
+                <img class="card-img-top" src="~/images/5.png" style="margin-top:0px;" alt="Card image">
+            </a>
+        </div>
+        <br />
+
+
+        @*<div class="card">
+                <a href="http://president.kg/ru/sobytiya/12774_utverghdena_nacionalnaya_strategiya_razvitiya_kirgizskoy_respubliki_na_2018_2040_godi" target="_blank">
+                    <div class="card text-white bg-primary mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Национальная стратегия развития Кыргызской Республики на 2018-2040 годы
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <br />
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/12801_strategiya_sovershenstvovaniya_zakonodatelstva_kirgizskoy_respubliki_o_viborah_na_2018_2020_gg_" target="_blank">
+                    <div class="card text-white bg-primary mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Стратегия совершенствования законодательства Кыргызской Республики о выборах на 2018-2020 гг.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <br />
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/2471_podpisan_ukaz_o_koncepcii_gosudarstvennoy_politiki_kirgizskoy_respubliki_v_religioznoy_sfere_na_2014_2020_godi" target="_blank">
+                    <div class="card text-white bg-primary mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция государственной политики Кыргызской Республики в религиозной сфере на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <br />
+
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/2054_ukazom_prezidenta_utverghdena_nacionalnaya_programma_razvitiya_gosudarstvennogo_yazika_i_sovershenstvovaniya_yazikovoy_politiki_v_kirgizskoy_respublike_na_2014_2020_godi" target="_blank">
+                    <div class="card text-white  bg-primary mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Национальная программа развития гос. языка и совершенствования языковой политики на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <br />
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/956_utverghdena_koncepciya_ukrepleniya_edinstva_naroda_i_meghetnicheskih_otnosheniy_v_kirgizskoy_respublike" target="_blank">
+                    <div class="card text-white bg-primary mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция укрепления единства народа и межэтнических отношений в Кыргызской Республике
+                        </div>
+                    </div>
+                </a>
+
+            </div>*@
+
+
+
+        @*<div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/2471_podpisan_ukaz_o_koncepcii_gosudarstvennoy_politiki_kirgizskoy_respubliki_v_religioznoy_sfere_na_2014_2020_godi" target="_blank">
+                    <div class="card text-white bg-danger mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция государственной политики Кыргызской Республики в религиозной сфере на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/2471_podpisan_ukaz_o_koncepcii_gosudarstvennoy_politiki_kirgizskoy_respubliki_v_religioznoy_sfere_na_2014_2020_godi" target="_blank">
+                    <div class="card text-white bg-info mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция государственной политики Кыргызской Республики в религиозной сфере на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/2471_podpisan_ukaz_o_koncepcii_gosudarstvennoy_politiki_kirgizskoy_respubliki_v_religioznoy_sfere_na_2014_2020_godi" target="_blank">
+                    <div class="card text-white bg-primary mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция государственной политики Кыргызской Республики в религиозной сфере на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="http://president.kg/ru/sobytiya/ukazy/2471_podpisan_ukaz_o_koncepcii_gosudarstvennoy_politiki_kirgizskoy_respubliki_v_religioznoy_sfere_na_2014_2020_godi" target="_blank">
+                    <div class="card  bg-transparent mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция государственной политики Кыргызской Республики в религиозной сфере на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a class="mylink" href="http://president.kg/ru/sobytiya/ukazy/2471_podpisan_ukaz_o_koncepcii_gosudarstvennoy_politiki_kirgizskoy_respubliki_v_religioznoy_sfere_na_2014_2020_godi" target="_blank">
+                    <div class="card text-white bg-danger mb-12" style="max-width: 30rem; height:170px">
+                        <div class="card-img-overlay text-center">
+                            Концепция государственной политики Кыргызской Республики в религиозной сфере на 2014-2020 годы
+                        </div>
+                    </div>
+                </a>
+            </div>*@
+
+
+
+
+        <br />
+
+
+    </div>
+</div>
+
+
+@*
+
+     <div class="container" width="100%">
+            <div id="carouselExampleControls" class="carousel vert slide carousel-fade" data-ride="carousel" data-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="~/health/images/amaldybaeva.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/amaldybaeva.jpg" alt="First slide">
+                        </a>
+                        <a href="~/health/images/amyrzabaev.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/amyrzabaev.jpg" alt="First slide">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="~/health/images/ajymakmatov.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/ajymakmatov.jpg" alt="First slide">
+                        </a>
+                        <a href="~/health/images/bkydykeeva.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor: pointer; width: 200px; height: 250px;" src="~/health/images/bkydykeeva.jpg" alt="First slide">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="~/health/images/bminjulkiev.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/bminjulkiev.jpg" alt="First slide">
+                        </a>
+                        <a href="~/health/images/bbeishenalieva.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/bbeishenalieva.jpg" alt="First slide">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="~/health/images/dkyiukova.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/dkyiukova.jpg" alt="First slide">
+                        </a>
+                        <a href="~/health/images/kmoldobasanov.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/kmoldobasanov.jpg" alt="First slide">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="~/health/images/mryskulov.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/mryskulov.jpg" alt="First slide">
+                        </a>
+                        <a href="~/health/images/skiizbaeva.jpg" data-size="1600x1067">
+                            <img class="d-block mx-auto img-fluid imgramka" style="cursor:pointer; width:200px; height:250px;" src="~/health/images/skiizbaeva.jpg" alt="First slide">
+                        </a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    <div class="row dept_row">
+        <div class="col">
+            <div class="dept_slider_container_outer">
+                <div class="dept_slider_container">
+
+                    <!-- Slider -->
+                    <div class="owl-carousel owl-theme dept_slider">
+                        <!-- Slide -->
+                        <div class="owl-item dept_item">
+                            <div class="dept_image"><img src="~/health/images/news/news-1.jpg" alt=""></div>
+                            <div class="dept_content">
+                                <div class="dept_title">
+                                </div>
+                                <a asp-action="News1" asp-controller="News" class="text-dark">
+                                    <b>
+                                        Министр культуры, информации и туризма КР Азамат Жаманкулов принял делегацию во главе с первым вице-президентом JICA Кадзухико Кошикава.
+                                    </b>
+                                </a>
+
+                                <div class="dept_link"><a asp-action="News5" asp-controller="News">Читать дальше</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="owl-item dept_item">
+                            <div class="dept_image"><img src="~/health/images/news/news-2.jpg" alt=""></div>
+                            <div class="dept_content">
+                                <div class="dept_title">
+                                </div>
+                                <a asp-action="News2" asp-controller="News" class="text-dark">
+                                    <b>
+                                        Баткен облусунда Абдыкадыр Орозбековдун 130 жылдыгына карата эл аралык илимий – практикалык конференция өтүп жатат.
+                                    </b>
+                                </a>
+
+                                <div class="dept_link"><a asp-action="News5" asp-controller="News">Читать дальше</a></div>
+                            </div>
+                        </div>
+
+
+                        <!-- Slide -->
+                        <div class="owl-item dept_item">
+                            <div class="dept_image"><img src="~/health/images/news/news-3.jpg" alt=""></div>
+                            <div class="dept_content">
+                                <div class="dept_title">
+                                </div>
+                                <a asp-action="News3" asp-controller="News" class="text-dark">
+                                    <b>
+                                        Кызматташуу боюнча кыргыз-сауд биргелешкен комитетинин 2-жыйынынын Протоколуна кол коюлду
+                                    </b>
+                                </a>
+
+                                <div class="dept_link"><a asp-action="News5" asp-controller="News">Читать дальше</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="owl-item dept_item">
+                            <div class="dept_image"><img src="~/health/images/news/news-4.jpg" alt=""></div>
+                            <div class="dept_content">
+                                <div class="dept_title">
+                                </div>
+                                <a asp-action="News4" asp-controller="News" class="text-dark">
+                                    <b>
+                                        В Национальной библиотеке Кыргызской Республики имени Алыкула Осмонова состоялась научно-практическая Конференция
+                                    </b>
+                                </a>
+
+                                <div class="dept_link"><a asp-action="News5" asp-controller="News">Читать дальше</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="owl-item dept_item">
+                            <div class="dept_image"><img src="~/health/images/news/news-5.jpg" alt=""></div>
+                            <div class="dept_content">
+                                <div class="dept_title">
+                                </div>
+                                <a asp-action="News5" asp-controller="News" class="text-dark">
+                                    <b>
+                                        СССРдин эл артисти Калый Молдобасановдун 90 жылдыгы белгиленди
+                                    </b>
+                                </a>
+
+                                <div class="dept_link"><a asp-action="News5" asp-controller="News">Читать дальше</a></div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- Dept Slider Nav -->
+                <div class="dept_slider_nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+
+            </div>
+
+        </div>
+    </div>
+*@

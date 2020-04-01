@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+@model WebSite.ViewModels.RegisterViewModel
+<h4 class="text-dark">Регистрация нового пользователя</h4>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <table class="table">
+        <tr>
+            <td width="200"><label asp-for="Email" class="text-dark"></label></td>
+            <td width="300"><input asp-for="Email" class="form-control" /></td>
+            <td><span asp-validation-for="Email"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Year" class="text-dark"></label></td>
+            <td><input asp-for="Year" class="form-control" /></td>
+            <td><span asp-validation-for="Year"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password" class="text-dark"></label></td>
+            <td><input asp-for="Password" class="form-control" /></td>
+            <td><span asp-validation-for="Password"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="PasswordConfirm" class="text-dark"></label></td>
+            <td><input asp-for="PasswordConfirm" class="form-control" /></td>
+            <td><span asp-validation-for="PasswordConfirm"></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Регистрация" class="btn-primary" /></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>
